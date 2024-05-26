@@ -181,14 +181,15 @@
 
  ```
  sudo systemctl enable node-exporter
- sudo systemctl start node-exporte
- 
+ sudo systemctl start node-exporter
+  ```
 8. `Проверим состояние сервиса`
- sudo systemctl status node-exporte
+ sudo systemctl status node-exporter
+ 
  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image2_1.jpg)
  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image2_2.jpg)
  
- ```
+
  
  
 
