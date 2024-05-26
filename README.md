@@ -53,18 +53,30 @@
 1. `Прикрепите к файлу README.md скриншот systemctl status node-exporter, где будет написано: node-exporter.service — Node Exporter Netology Lesson 9.4 — [Ваши ФИО]`
 
 ## Решение 2
-1. ``
+1. `Создаем пользователя`
  
  ```
+ sudo useradd --no-create-home --shell /bin/false prometheus
+ ```
+
+2. `Скачиваем и устанавливаем prometheus`
+
+ ```
+ wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.linux-amd64.tar.gz
+ ```
  
+разархивируем 
+ ```
+ tar xvfz prometheus-2.52.0.linux-amd64.tar.gz
+ ```
+перейдем в директорию prometheus-2.52.0.linux-amd64
+ ```
+ cd prometheus-2.52.0.linux-amd64
  ```
 
-2. ``
 
- ```
 
- ```
- 
+
 
 ## Задание 3
 
