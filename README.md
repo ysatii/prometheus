@@ -19,18 +19,27 @@
 
 
 ## Решение 1
-1. ``
+1. `Создаем пользователя`
  
  ```
+ sudo useradd --no-create-home --shell /bin/false prometheus
+ ```
+
+2. `Скачиваем и устанавливаем prometheus`
+
+ ```
+ wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.linux-amd64.tar.gz
+ ```
  
+ разархивируем 
  ```
-
-1. ``
-
+ tar xvfz prometheus-2.52.0.linux-amd64.tar.gz
  ```
-
+ 
+ перейдем в директорию prometheus-2.52.0.linux-amd64
  ```
-
+ cd prometheus-2.52.0.linux-amd64
+ ```
 
  
  
@@ -65,14 +74,16 @@
  wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.linux-amd64.tar.gz
  ```
  
-разархивируем 
+ разархивируем 
  ```
  tar xvfz prometheus-2.52.0.linux-amd64.tar.gz
  ```
-перейдем в директорию prometheus-2.52.0.linux-amd64
+ 
+ перейдем в директорию prometheus-2.52.0.linux-amd64
  ```
  cd prometheus-2.52.0.linux-amd64
  ```
+ 
 
 
 
