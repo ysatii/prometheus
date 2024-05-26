@@ -270,9 +270,25 @@
 ## Решение 4
 
  
-1. `` 
+1. `Установка Grafana ` 
+ ```
+ sudo apt-get install -y adduser libfontconfig1 musl
+ wget https://dl.grafana.com/enterprise/release/grafana-enterprise_11.0.0_amd64.deb
+ sudo dpkg -i grafana-enterprise_11.0.0_amd64.deb
+ ```
+  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4.jpg)
+ 
+2. `Запуск Grafana` 
+ ```
+ systemctl enable grafana-server
+ systemctl start grafana-server
+ systemctl status grafana-server
+ ```
 
+ 
 
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4_1.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4_1.jpg)
 
 
 ## Задание 5 *
