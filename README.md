@@ -43,7 +43,64 @@
 
  
  
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image1.jpg)
+ 
+2. `Создадим необходимые директории и переместим в них файлы`
+ mkdir /etc/prometheus/
+ mkdir /var/lib/prometheus/
+
+ cp ./prometheus promtool /usr/local/bin
+ cp -R ./console_libraries/ /etc/prometheus/
+ cp -R ./consoles/ /etc/prometheus/
+ cp -R ./prometheus.yml /etc/prometheus/
+ 
+ передача прав пользователю prometheus
+ chown -R prometheus:prometheus /etc/prometheus/ /var/lib/prometheus/
+ chown -R prometheus:prometheus /usr/local/bin/prometheus
+ chown -R prometheus:prometheus /usr/local/bin/promtool
+ 
+ проверим ответ prometheus на порту 9090
+ /usr/local/bin/prometheus --config.file /etc/prometheus/prometheus.yml --storage.tsdb.path /var/lib/prometheus/ --web.console.templates=/etc/prometheus/consoles --web.console.libraries=/etc/prometheus/console_libraries
+ 
+ 
+ ------------------
+ создадим сервис prometheus
+ nano /etc/systemd/system/prometheus.service
+ ```
+ [Unit]
+ Description=Prometheus Service Netology Lesson 9.4 - Мельник Юрий Александрович 
+ After=network.target
+ [Service]
+ User=prometheus
+ Group=prometheus
+ Type=simple
+ ExecStart=/usr/local/bin/prometheus \
+ --config.file /etc/prometheus/prometheus.yml \
+ --storage.tsdb.path /var/lib/prometheus/ \
+ --web.console.templates=/etc/prometheus/consoles \
+ --web.console.libraries=/etc/prometheus/console_libraries
+ ExecReload=/bin/kill -HUP $MAINPID Restart=on-failure
+ [Install]
+ WantedBy=multi-user.target
+ ```
+  ------------------------------
+  Передайте права на файл:
+  chown -R prometheus:prometheus /var/lib/prometheus
+   
+   sudo systemctl enable prometheus
+   sudo systemctl start prometheus
+   sudo systemctl status prometheus
+ 
+ 
+![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1.jpg)
+![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_2.jpg)
+![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_3.jpg)
+![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_4.jpg)
+![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_5.jpg)
+![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_6.jpg)
+
+
+
+
 
  
 ## Задание 2
@@ -62,26 +119,16 @@
 1. `Прикрепите к файлу README.md скриншот systemctl status node-exporter, где будет написано: node-exporter.service — Node Exporter Netology Lesson 9.4 — [Ваши ФИО]`
 
 ## Решение 2
-1. `Создаем пользователя`
+1. ` 
  
  ```
- sudo useradd --no-create-home --shell /bin/false prometheus
+  
  ```
 
-2. `Скачиваем и устанавливаем prometheus`
+2. ` `
 
  ```
- wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.linux-amd64.tar.gz
- ```
- 
- разархивируем 
- ```
- tar xvfz prometheus-2.52.0.linux-amd64.tar.gz
- ```
- 
- перейдем в директорию prometheus-2.52.0.linux-amd64
- ```
- cd prometheus-2.52.0.linux-amd64
+  
  ```
  
 
