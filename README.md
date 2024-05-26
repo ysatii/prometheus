@@ -115,7 +115,7 @@
  
 ## Задание 2
 
-### ``
+### `Установите Node Exporter.`
 ## `Процесс выполнения`
 
 1. `Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.`
@@ -129,20 +129,67 @@
 1. `Прикрепите к файлу README.md скриншот systemctl status node-exporter, где будет написано: node-exporter.service — Node Exporter Netology Lesson 9.4 — [Ваши ФИО]`
 
 ## Решение 2
-1. ` 
+1. `Установка Node Exporter`
  
  ```
-  
+ wget https://github.com/prometheus/node_exporter/releases/download/v1.8.1/node_exporter-1.8.1.linux-amd64.tar.gz
  ```
 
-2. ` `
+2. `Перейдем в директорию Перейдем в директорию`
 
  ```
-  
+  cd node_exporter-1.8.1.linux-amd64
  ```
  
+3. `Создадим /etc/prometheus/node-exporter`
 
+ ```
+ mkdir /etc/prometheus/node-exporter
+ ```
+ 
+4. `Скопируем файл node_exporter в /etc/prometheus/node-exporter/`
 
+ ```
+ cp ./node_exporter /etc/prometheus/node-exporter/
+
+ ```
+ 
+5. `Создадим сервис node-exporter.service `
+
+ ```
+ nano /etc/systemd/system/node-exporter.service 
+ chown -R prometheus:prometheus /etc/prometheus/node-exporter/
+ ```
+
+6. `Листинг /etc/systemd/system/node-exporter.service`
+
+ ```
+ [Unit]
+ Description=Node Exporter Lesson 9.4 - Мельник Юрий Александрович 
+ After=network.target
+ [Service]
+ User=prometheus
+ Group=prometheus
+ Type=simple
+ ExecStart=/etc/prometheus/node-exporter/node_exporter
+ [Install]
+ WantedBy=multi-user.target
+ ```
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image2.jpg)
+ 
+7. `Установим автозагрузку и запустим сервис`
+
+ ```
+ sudo systemctl enable node-exporter
+ sudo systemctl start node-exporte
+ 
+8. `Проверим состояние сервиса`
+ sudo systemctl status node-exporte
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image2_1.jpg)
+ 
+ ```
+ 
+ 
 
 
 
