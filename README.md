@@ -209,15 +209,15 @@
  Прикрепите к файлу README.md скриншот из интерфейса Prometheus вкладки Status > Targets, чтобы было видно минимум два эндпоинта
 ## Решение 3
  
-1. `Произведем настройку и перезапустим сервис`
+1. `Сервис prometheus до настройки`
 
  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image3.jpg)
- ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image3_1.jpg)
- ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image3_2.jpg)
- ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image3_3.jpg)
- ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image3_4.jpg)
- ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image3_5.jpg)
 
+
+
+2. `Произведем настройку и перезапустим сервис`
+ Листинг /etc/prometheus/prometheus.yml
+ 
  ```
  # my global config
  global:
@@ -249,8 +249,15 @@
      static_configs:
        - targets: ["localhost:9090", "localhost:9100"]
  ```
-
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image3_1.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image3_2.jpg)
  
+ 
+3. `Сервис после перезапуска`
+ 
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image3_3.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image3_4.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image3_5.jpg)
 
 # Дополнительные задания со звёздочкой*
 ## Задание 4 *
