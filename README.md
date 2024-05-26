@@ -51,7 +51,7 @@
  cp -R ./console_libraries/ /etc/prometheus/
  cp -R ./consoles/ /etc/prometheus/
  cp -R ./prometheus.yml /etc/prometheus/
-  ```
+ ```
  
  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1.jpg)
  
