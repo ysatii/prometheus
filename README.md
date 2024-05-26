@@ -186,6 +186,7 @@
 8. `Проверим состояние сервиса`
  sudo systemctl status node-exporte
  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image2_1.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image2_2.jpg)
  
  ```
  
