@@ -129,7 +129,7 @@
 1. `Прикрепите к файлу README.md скриншот systemctl status node-exporter, где будет написано: node-exporter.service — Node Exporter Netology Lesson 9.4 — [Ваши ФИО]`
 
 ## Решение 2
-1. `Установка Node Exporter`
+1. `Скачаем Node Exporter`
  
  ```
  wget https://github.com/prometheus/node_exporter/releases/download/v1.8.1/node_exporter-1.8.1.linux-amd64.tar.gz
