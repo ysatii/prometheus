@@ -50,14 +50,21 @@
  cp -R ./console_libraries/ /etc/prometheus/
  cp -R ./consoles/ /etc/prometheus/
  cp -R ./prometheus.yml /etc/prometheus/
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1.jpg)
  
 6. `передача прав пользователю prometheus` 
+ ```
  chown -R prometheus:prometheus /etc/prometheus/ /var/lib/prometheus/
  chown -R prometheus:prometheus /usr/local/bin/prometheus
  chown -R prometheus:prometheus /usr/local/bin/promtool
- 
+ ```
 7. `проверим ответ prometheus на порту 9090`
+ ```
  /usr/local/bin/prometheus --config.file /etc/prometheus/prometheus.yml --storage.tsdb.path /var/lib/prometheus/ --web.console.templates=/etc/prometheus/consoles --web.console.libraries=/etc/prometheus/console_libraries
+ ```
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_2.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_3.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_4.jpg)
  
 8. `создадим сервис prometheus и проверим его работоспособность`
  ------------------
@@ -83,6 +90,8 @@
  [Install]
  WantedBy=multi-user.target
  ```
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_5.jpg)
+
 
  Передайте права на файл:
  ```
@@ -94,11 +103,6 @@
  sudo systemctl status prometheus
  ```
  
-![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1.jpg)
-![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_2.jpg)
-![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_3.jpg)
-![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_4.jpg)
-![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_5.jpg)
 ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_6.jpg)
 
 
