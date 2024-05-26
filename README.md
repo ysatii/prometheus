@@ -31,20 +31,18 @@
  wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.linux-amd64.tar.gz
  ```
  
- разархивируем 
+3. `разархивируем `
  ```
  tar xvfz prometheus-2.52.0.linux-amd64.tar.gz
  ```
  
- перейдем в директорию prometheus-2.52.0.linux-amd64
+4. `перейдем в директорию prometheus-2.52.0.linux-amd64` 
  ```
  cd prometheus-2.52.0.linux-amd64
  ```
 
  
- 
- 
-2. `Создадим необходимые директории и переместим в них файлы`
+5. `Создадим необходимые директории и переместим в них файлы`
  mkdir /etc/prometheus/
  mkdir /var/lib/prometheus/
 
@@ -53,18 +51,21 @@
  cp -R ./consoles/ /etc/prometheus/
  cp -R ./prometheus.yml /etc/prometheus/
  
- передача прав пользователю prometheus
+6. `передача прав пользователю prometheus` 
  chown -R prometheus:prometheus /etc/prometheus/ /var/lib/prometheus/
  chown -R prometheus:prometheus /usr/local/bin/prometheus
  chown -R prometheus:prometheus /usr/local/bin/promtool
  
- проверим ответ prometheus на порту 9090
+7. `проверим ответ prometheus на порту 9090`
  /usr/local/bin/prometheus --config.file /etc/prometheus/prometheus.yml --storage.tsdb.path /var/lib/prometheus/ --web.console.templates=/etc/prometheus/consoles --web.console.libraries=/etc/prometheus/console_libraries
  
- 
+8. `создадим сервис prometheus и проверим его работоспособность`
  ------------------
- создадим сервис prometheus
+ ```
  nano /etc/systemd/system/prometheus.service
+ ``` 
+ 
+ Листинг /etc/systemd/system/prometheus.service
  ```
  [Unit]
  Description=Prometheus Service Netology Lesson 9.4 - Мельник Юрий Александрович 
@@ -82,14 +83,16 @@
  [Install]
  WantedBy=multi-user.target
  ```
-  ------------------------------
-  Передайте права на файл:
-  chown -R prometheus:prometheus /var/lib/prometheus
-   
-   sudo systemctl enable prometheus
-   sudo systemctl start prometheus
-   sudo systemctl status prometheus
- 
+
+ Передайте права на файл:
+ ```
+ chown -R prometheus:prometheus /var/lib/prometheus
+ ```
+ ```
+ sudo systemctl enable prometheus
+ sudo systemctl start prometheus
+ sudo systemctl status prometheus
+ ```
  
 ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1.jpg)
 ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1_2.jpg)
