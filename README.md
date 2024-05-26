@@ -273,10 +273,12 @@
 1. `Установка Grafana ` 
  ```
  sudo apt-get install -y adduser libfontconfig1 musl
- wget https://dl.grafana.com/enterprise/release/grafana-enterprise_11.0.0_amd64.deb
- sudo dpkg -i grafana-enterprise_11.0.0_amd64.deb
+ wget wget https://dl.grafana.com/oss/release/grafana_11.0.0_amd64.deb
+ sudo dpkg -i grafana_11.0.0_amd64.deb
  ```
   ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4.jpg)
+  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4_1.jpg)
+  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4_2.jpg)
  
 2. `Запуск Grafana` 
  ```
@@ -287,8 +289,7 @@
 
  
 
- ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4_1.jpg)
- ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4_1.jpg)
+
 
 
 ## Задание 5 *
@@ -299,8 +300,11 @@
 
 ## Решение 5
  
-![alt text](https://github.com/ysatii/gitlab-hw/blob/zabbix2/img1/image5.jpg)
-
+  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5.jpg)
+  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_1.jpg)
+  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_2.jpg)
+  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_3.jpg)
+  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_4.jpg)
  
  
 
