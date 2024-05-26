@@ -258,9 +258,6 @@
 # Дополнительные задания со звёздочкой*
 ## Задание 4 *
 ### Интегрируйте Grafana и Prometheus.
- 
-
-
 
 
 ### `Требования к результату`
@@ -269,16 +266,12 @@
 
 ## Решение 4
 
- 
 1. `Установка Grafana ` 
  ```
  sudo apt-get install -y adduser libfontconfig1 musl
  wget wget https://dl.grafana.com/oss/release/grafana_11.0.0_amd64.deb
  sudo dpkg -i grafana_11.0.0_amd64.deb
  ```
-  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4.jpg)
-  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4_1.jpg)
-  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4_2.jpg)
  
 2. `Запуск Grafana` 
  ```
@@ -287,9 +280,9 @@
  systemctl status grafana-server
  ```
 
- 
-
-
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4_1.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image4_2.jpg)
 
 
 ## Задание 5 *
@@ -300,11 +293,11 @@
 
 ## Решение 5
  
-  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5.jpg)
-  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_1.jpg)
-  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_2.jpg)
-  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_3.jpg)
-  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_4.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_1.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_2.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_3.jpg)
+ ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image5_4.jpg)
  
  
 
