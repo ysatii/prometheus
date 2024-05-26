@@ -43,13 +43,16 @@
 
  
 5. `Создадим необходимые директории и переместим в них файлы`
+ ```
  mkdir /etc/prometheus/
  mkdir /var/lib/prometheus/
-
+  
  cp ./prometheus promtool /usr/local/bin
  cp -R ./console_libraries/ /etc/prometheus/
  cp -R ./consoles/ /etc/prometheus/
  cp -R ./prometheus.yml /etc/prometheus/
+  ```
+ 
  ![alt text](https://github.com/ysatii/prometheus/blob/main/img1/image1.jpg)
  
 6. `передача прав пользователю prometheus` 
